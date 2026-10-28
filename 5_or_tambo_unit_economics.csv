@@ -1,0 +1,4 @@
+Distance_Band,Completed_Trips,Avg_Dist_km,Avg_Gross_Fare_ZAR,Driver_Payout_After_38Pct_Fee,Petrol_Cost_Incl_Deadhead_ZAR,Net_Driver_Profit_ZAR,Net_Profit_Per_Km_ZAR
+1_Short Haul (0-10km),777371,6.2,114.33,70.88,13.01,57.87,10.09
+2_Medium Suburban (10-40km),377124,14.9,210.08,130.25,31.39,98.86,6.8
+3_OR Tambo Airport Long-Haul (45km+),70629,53.0,623.13,386.34,172.67,213.67,4.04
