@@ -1,7 +1,0 @@
-Driver_Volume_Tier,Car_Hygiene,Total_Requests,Avg_Star_Rating,Cancel_Rate_Pct,Avg_Realized_Fare_ZAR
-Hit Target (500+ Trips/m),Clean Car (Washed Regularly),308779,4.75,33.8,172.96
-Hit Target (500+ Trips/m),Dirty Car (Infrequent Wash),421446,3.95,33.6,156.42
-Low Volume (<300 Trips/m),Clean Car (Washed Regularly),185367,4.76,46.0,182.86
-Low Volume (<300 Trips/m),Dirty Car (Infrequent Wash),221308,3.95,45.2,150.81
-Mid-Tier (300-499 Trips/m),Clean Car (Washed Regularly),383686,4.75,39.9,175.66
-Mid-Tier (300-499 Trips/m),Dirty Car (Infrequent Wash),479414,3.95,39.7,157.14
