@@ -1,0 +1,5 @@
+Snap_ID,Source_Images,Screen_Type,Rules_And_Details,Target_Rides,Completed_Rides,Promised_Bonus_ZAR,Realized_Wallet_Impact_ZAR,Outcome_Status
+SNAP-20A,Img 11 (Top),Bolt Campaign Completed,Gauteng All Categories | >=40% Acceptance,6,8,72.0,72.0,Qualified (8/6 Rides)
+SNAP-20B,Img 11 & 12,Bolt Morning Rush (28 Oct 06:00-09:59),Gauteng Rush | >=40% Acceptance,7,1,84.0,0.0,Failed Target (1/7 Rides = R0)
+SNAP-20C,Img 12 (Bottom),Bolt Evening Rush (26 Oct 18:00-21:59),Gauteng Rush | >=40% Acceptance,6,5,72.0,0.0,Missed by 1 Ride (5/6 Rides = R0!)
+SNAP-21,Img 14 (Wallet),Bolt Cash Commission Debt Lockout,Today: R28.38 | Balance: -R306.34,0,0,0.0,-306.34,"LOCKED: ""Cash rides are paused"""

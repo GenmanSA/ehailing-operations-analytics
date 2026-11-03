@@ -1,0 +1,8 @@
+Vehicle_Tier,Vehicle_Model,Weekly_Owner_Lease_ZAR,Traditional_Monthly_Comm_Burn_ZAR,Bro_Flat_Monthly_Sub_ZAR,Monthly_Fee_Saved_Via_Bro_ZAR,Current_35Pct_Comm_Weekly_Net_ZAR,Bro_R600pm_Current_Fare_Weekly_Net_ZAR,Good_Pricing_Weekly_Net_ZAR,Bro_R600pm_Plus_Good_Weekly_Net_ZAR,Excellent_Pricing_Weekly_Net_ZAR,Owner_Equity_Current_Loss_ZAR,Owner_Equity_After_Reform_Profit_ZAR
+Standard (UberX/Bolt),Nissan Almera (X),3030.0,17089.0,600,16489.0,203.0,4326.0,6903.0,10411.0,12152.0,-75559.0,51011.0
+Standard (UberX/Bolt),Toyota Corolla Quest (X),3010.0,17245.0,600,16645.0,307.0,4469.0,7051.0,10589.0,12341.0,-76274.0,51108.0
+Economy (Go),Toyota Vitz (Go),1871.0,13996.0,600,13396.0,732.0,4081.0,6220.0,9066.0,11060.0,-64152.0,25001.0
+Economy (Go),Suzuki Swift (Go),1864.0,14156.0,600,13556.0,800.0,4189.0,6355.0,9236.0,11250.0,-64144.0,25228.0
+Economy (Go),Hyundai Grand i10 (Go),1859.0,14129.0,600,13529.0,831.0,4213.0,6350.0,9220.0,11225.0,-64409.0,25226.0
+Premium (Uber Black),Mercedes C-Class (Black),6745.0,41260.0,600,40660.0,6402.0,16567.0,10599.0,16287.0,16925.0,-150755.0,107055.0
+Luxury Van (XL/Black),Mercedes Vito Van (XL),7898.0,49991.0,600,49391.0,8119.0,20467.0,12268.0,18958.0,19383.0,-177584.0,125308.0

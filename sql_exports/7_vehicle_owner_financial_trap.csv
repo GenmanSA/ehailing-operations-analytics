@@ -1,0 +1,22 @@
+Vehicle_Tier,Vehicle_Model,Annual_Service_Freq,Vehicles_In_Cohort,Weekly_Target_ZAR,Gross_Lease_46Wks_ZAR,Bank_Finance_And_Insurance_ZAR,Annual_Services_Tyres_Brakes_ZAR,High_Mileage_Depreciation_ZAR,Net_Cash_Before_Depr_ZAR,True_Owner_Net_Profit_Loss_ZAR
+Economy (Go),Hyundai Grand i10 (Go),2x Services/Yr (40k km),48,1847.0,84970.0,85200.0,19100.0,38000.0,-21350.0,-59350.0
+Economy (Go),Suzuki Swift (Go),2x Services/Yr (40k km),91,1874.0,86198.0,85200.0,19100.0,38000.0,-20268.0,-58268.0
+Economy (Go),Toyota Vitz (Go),2x Services/Yr (40k km),55,1859.0,85525.0,85200.0,19100.0,38000.0,-20938.0,-58938.0
+Economy (Go),Hyundai Grand i10 (Go),3x Services/Yr (60k km),92,1860.0,85573.0,85200.0,23900.0,38000.0,-25589.0,-63589.0
+Economy (Go),Suzuki Swift (Go),3x Services/Yr (60k km),201,1887.0,86793.0,85200.0,23900.0,38000.0,-24425.0,-62425.0
+Economy (Go),Toyota Vitz (Go),3x Services/Yr (60k km),135,1881.0,86547.0,85200.0,23900.0,38000.0,-24808.0,-62808.0
+Economy (Go),Hyundai Grand i10 (Go),4x Services/Yr (80k+ km),76,1858.0,85475.0,85200.0,28700.0,38000.0,-30590.0,-68590.0
+Economy (Go),Suzuki Swift (Go),4x Services/Yr (80k+ km),148,1831.0,84205.0,85200.0,28700.0,38000.0,-31877.0,-69877.0
+Economy (Go),Toyota Vitz (Go),4x Services/Yr (80k+ km),111,1876.0,86317.0,85200.0,28700.0,38000.0,-29871.0,-67871.0
+Luxury Van (XL/Black),Mercedes Vito Van (XL),2x Services/Yr (40k km),11,8023.0,369071.0,308400.0,70000.0,135000.0,-11392.0,-146392.0
+Luxury Van (XL/Black),Mercedes Vito Van (XL),3x Services/Yr (60k km),34,7797.0,358654.0,308400.0,92000.0,135000.0,-43857.0,-178857.0
+Luxury Van (XL/Black),Mercedes Vito Van (XL),4x Services/Yr (80k+ km),21,7992.0,367641.0,308400.0,114000.0,135000.0,-57068.0,-192068.0
+Premium (Uber Black),Mercedes C-Class (Black),2x Services/Yr (40k km),21,6750.0,310478.0,260400.0,63000.0,115000.0,-15009.0,-130009.0
+Premium (Uber Black),Mercedes C-Class (Black),3x Services/Yr (60k km),36,6692.0,307817.0,260400.0,81500.0,115000.0,-36542.0,-151542.0
+Premium (Uber Black),Mercedes C-Class (Black),4x Services/Yr (80k+ km),30,6805.0,313044.0,260400.0,100000.0,115000.0,-49414.0,-164414.0
+Standard (UberX/Bolt),Nissan Almera (X),2x Services/Yr (40k km),36,3098.0,142511.0,126000.0,23100.0,56000.0,-8769.0,-64769.0
+Standard (UberX/Bolt),Toyota Corolla Quest (X),2x Services/Yr (40k km),60,3001.0,138067.0,126000.0,23100.0,56000.0,-13212.0,-69212.0
+Standard (UberX/Bolt),Nissan Almera (X),3x Services/Yr (60k km),67,2988.0,137456.0,126000.0,29900.0,56000.0,-20606.0,-76606.0
+Standard (UberX/Bolt),Toyota Corolla Quest (X),3x Services/Yr (60k km),94,2995.0,137772.0,126000.0,29900.0,56000.0,-20334.0,-76334.0
+Standard (UberX/Bolt),Nissan Almera (X),4x Services/Yr (80k+ km),55,3039.0,139802.0,126000.0,36700.0,56000.0,-25002.0,-81002.0
+Standard (UberX/Bolt),Toyota Corolla Quest (X),4x Services/Yr (80k+ km),78,3034.0,139547.0,126000.0,36700.0,56000.0,-25466.0,-81466.0

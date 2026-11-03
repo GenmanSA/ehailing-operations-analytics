@@ -1,0 +1,4 @@
+Distance_Band,Completed_Trips,Avg_Dist_km,Avg_Unpaid_Pickup_km,Avg_Gross_Fare_ZAR,Driver_Payout_After_35Pct_Fee,Petrol_Cost_Incl_Pickup_Deadhead_ZAR,Net_Driver_Profit_ZAR,Net_Profit_Per_Total_Km_ZAR
+1_Short Haul (0-10km),750824,6.2,4.0,77.04,50.07,22.13,27.94,3.45
+2_Medium Suburban (10-40km),403029,15.2,4.0,139.72,90.82,41.63,49.19,2.86
+3_OR Tambo / Intercity (45km+),70758,63.5,4.0,416.72,270.87,215.89,54.98,0.83

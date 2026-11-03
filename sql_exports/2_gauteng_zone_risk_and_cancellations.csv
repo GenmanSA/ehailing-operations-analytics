@@ -1,0 +1,11 @@
+Pickup_Zone,Zone_Category,Total_Requests,Avg_Wait_Min,Cancel_Rate_Pct,Lost_Revenue_ZAR_Millions,Realized_Revenue_ZAR_Millions
+Germiston / Bree Taxi Rank,High-Risk Taxi Rank / Station,139730,12.9,77.9,10.73,3.08
+Park Station / Noord Rank (JHB CBD),High-Risk Taxi Rank / Station,220107,13.0,77.9,16.95,4.83
+Bosman Gautrain / Rank (PTA CBD),High-Risk Taxi Rank / Station,199308,13.0,77.8,15.34,4.39
+Mamelodi & PTA West/North Ranks,High-Risk Taxi Rank / Station,160858,12.9,77.8,12.35,3.53
+Sunnyside & PTA CBD (High Vol/Taxis),Challenging CBD / High-Volume,280607,8.5,35.3,9.79,17.97
+Brooklyn & Pretoria East (Safe),Safe Suburb / Safe Gautrain,259824,4.2,11.6,2.95,22.69
+Rosebank Suburbs (Safe Zone),Safe Suburb / Safe Gautrain,159984,4.2,11.6,1.83,13.97
+Sandton Gautrain (Safe Zone),Safe Suburb / Safe Gautrain,259846,4.2,11.6,2.99,22.71
+Centurion Gautrain (Safe Zone),Safe Suburb / Safe Gautrain,239793,4.2,11.5,2.72,20.99
+OR Tambo / Intercity Long-Haul (45km+),Safe Suburb / Safe Gautrain,79943,4.2,11.5,3.78,29.49
