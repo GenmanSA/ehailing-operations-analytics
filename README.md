@@ -1,64 +1,81 @@
-South African E-Hailing Operations, Safety, Fleet Investor & Driver Unit Economics (2016–2026)
+# E-hailing Operations Analytics: Gauteng, South Africa
 
-Author: Karabo Eugene Hlahla | Location: Pretoria, Gauteng, South Africa
-Tech Stack: Python (`Pandas`, `NumPy`, `Matplotlib`, `Seaborn`) • `DuckDB` (In-Memory Analytical SQL) • Power BI
+An exploratory analysis of driver unit economics, dispatch offers, fleet costs, demand patterns, and pickup safety across South Africa’s e-hailing market. The project combines firsthand driver experience with a small set of captured dispatches and a large, assumption-driven simulation to examine possible operational problems and interventions.
 
----
+> **Important:** Simulated results are scenarios, not observed market statistics or proof of platform behavior. Field observations are a small, non-random sample and should not be generalized to all drivers, trips, platforms, or periods. Interpret findings alongside the methodology and limitations below.
 
-Executive Summary: Structural Diagnosis & Turnaround Blueprint
-Between 2016 and 2026, the South African e-hailing sector in Gauteng (Pretoria, Johannesburg, Centurion & Ekurhuleni) experienced severe unit-economic compression and escalating corridor security risks. Combining a 2,000,000-trip simulation across 1,500 vehicles with primary field telemetry (19 live driver dispatch/receipt captures and 4 campaign/wallet lockout logs), this repository diagnoses seven structural bottlenecks and models three commercial turnaround interventions:
+## Project context
 
-1. Decade-Long Driver Margin Compression & Fleet Investor Deficit: Nominal per-km rates declined due to upfront algorithmic discounting (R1.89–R4.92/km on observed 2026 dispatches vs. R7.20–R8.00/km in 2016), while inland petrol rose +128% (R12.50/L to R28.50/L) and platform deductions climbed to 29.14%–35%. Renting drivers paying R1,500–R3,500/week (Suzuki Swift, Toyota Vitz, Corolla Quest) net just R203–R831/week, while vehicle owners funding 2x–4x annual services, tyres, bank finance, commercial insurance, and high-mileage depreciation incur -R58k to -R192k/year in negative net equity.
-2. Primary Field Telemetry: Live dispatch captures confirm algorithmic distance decay (7.5 km paying R36.91 while 12.2 km pays R36.90; 22.8 km paying R115.32 while 49.7 km Intercity pays R115.97), uncompensated "Out of radius" approach pickups up to 17.7 km, 40%-acceptance rush campaign traps (5/6 rides = R0), and -R306.34 ("Cash rides are paused") commission debt lockouts.
-3. Solution 1 — Flat Monthly Subscription Model (BRO Cabs R600/Month = 0% Commission): Replacing the 29.1%–35% per-trip commission (which deducts R14,000 to R50,000/month from full-time drivers) with a R600/month (R150/week) flat subscription allows drivers to retain 100% of passenger fares, lifting Economy/Standard weekly net pay from R203–R831/wk to R4,081–R4,469/wk on current fares and eliminating cash-ride lockouts.
-4. Solution 2 — Fair Tariff Reform + BRO R600/pm (R5,000 to R10,000+/Week Net Take-Home): Eliminating distance decay, compensating approach pickups beyond 2–3 km (R4.00–R5.00/km), and adding an intercity return-fuel allowance lifts Economy and Standard driver net take-home (after fuel, fee, and car lease) to R6,220–R7,051/week (Good Pricing) and R9,066–R10,589/week (BRO R600/pm + Good Pricing) while flipping 100% of the 19 field-captured dispatches and Fleet Owner Equity (+R25k to +R125k/yr) into profit.
-5. Solution 3 — App-Enforced 250m Smart Safety Pickup Zones: Disabling arbitrary street-corner pin drops inside high-risk polygons (Bosman Station, Park Station, Germiston, Mamelodi, Sunnyside, Eldorado Park) and routing riders to 250m Geofenced Smart Safety Hubs (CCTV + Armed Response) reduces high-risk cancellations from ~78% to 12.8%, cuts wait times from 13.0 mins to 4.4 mins, reduces taxi chases by -87.5%, and recovers +R67.8M/year in realized fares.
+The author worked as an Uber and Bolt partner driver from **2018 through 2025**, primarily in Gauteng. The project’s broader comparisons cover **2016–2026**; those years are analytical reference periods and do not mean the author has firsthand records for every year. Some dispatch captures also include a Western Cape route.
 
----
+The project asks how fares, platform deductions, fuel, unpaid pickup distance, vehicle wear, leases, and demand variability affect driver and vehicle-owner economics—and explores possible changes to pricing and pickup safety.
 
-## Executive Visual Walkthrough (15 Problem-vs-Solution Pairs — 30 Charts)
+## What’s in the repository
 
-### 1. Gauteng Transit-Hub Conflict Zones vs. 250m Dynamic Geofencing
-![Pair 1](visuals/pair1_taxi_ranks_and_geofencing.png)
+- [`ehailing_operations_analytics (1).ipynb`](ehailing_operations_analytics%20%281%29.ipynb) — notebook version of the analysis.
+- [`ehailing_operations_analytics.py`](ehailing_operations_analytics.py) — exported Python script. The script is designed around Google Colab and includes a final download step.
+- [`visuals/`](visuals/) — generated charts, including the 15 problem-and-scenario visual pairs listed below.
+- [`sql_exports/`](sql_exports/) — CSV tables generated by the analysis when it runs.
 
-### 2. Monthly Revenue Cyclicity: Salary Window (25th–5th) vs. Mid-Month Trough & Stadium Spikes
-![Pair 2](visuals/pair2_payday_and_stadium_spikes.png)
+## Evidence and methodology
 
-### 3. Decade-Long Driver Margin Compression (2016 vs. 2026) & Weekly Lease Deductions
-![Pair 3](visuals/pair3_driver_exploitation_and_leases.png)
+The project uses two different kinds of evidence. They should not be conflated:
 
-### 4. Armed-Response Panic Buttons vs. Static Policing & Telematics Recovery Rates
-![Pair 4](visuals/pair4_panic_buttons_and_trackers.png)
+1. **Field captures:** 19 dispatch/receipt records are entered in the analysis, along with four campaign or wallet-lockout records. They are firsthand snapshots, not a random or representative sample. They cover different products, locations, distances, and fare conditions. The CSV filename’s “24_snapshots” wording does not describe the 19 dispatch records currently in the source data.
+2. **Synthetic simulation:** the model generates **2,000,000 simulated trip records** and **1,500 synthetic driver profiles**. It assigns fares, trip distances, pickup distances, demand patterns, cancellations, incidents, and operating costs using programmed distributions and assumptions. The simulated trip count is not a count of real trips or platform records.
 
-### 5. Intercity & OR Tambo Long-Haul Deadhead Trap vs. Proposed R450 Flat Base Fare
-![Pair 5](visuals/pair5_or_tambo_unit_economics.png)
+The analysis uses Python with Pandas, NumPy, Matplotlib, and Seaborn, plus DuckDB for analytical queries and CSV exports. The script specifies fuel inputs of **R12.50/L** and **R28.50/L** for its 2016 and 2026 scenarios, respectively, and uses assumed fuel-burn and maintenance rates. These are model inputs; they should be checked against dated, sourced records before being presented as verified historical market prices or costs.
 
-### 6. Vehicle Hygiene ROI & 500-Trip Monthly Volume Bonus
-![Pair 6](visuals/pair6_cleanliness_and_bonus_gamification.png)
+## Areas explored
 
-### 7. Weekend Nightlife Revenue Bleed Heatmap & Passenger Wait-Time Patience Curve
-![Pair 7](visuals/pair7_heatmap_and_wait_tolerance.png)
+- Driver earnings after modeled platform deductions, fuel, and vehicle lease costs.
+- Dispatch yield per paid kilometre compared with total distance, including unpaid pickup distance.
+- Fare and cost scenarios across vehicle tiers and distance bands, including long-haul and return-distance assumptions.
+- Modeled demand variation around salary windows, weekends, and selected event dates.
+- Simulated cancellation and safety outcomes across pickup-zone categories.
+- Vehicle-owner scenarios covering lease revenue, finance, insurance, maintenance, tracking, and depreciation.
+- Illustrative pricing, flat-subscription, and designated safe-pickup-zone interventions.
 
-### 8. Gauteng Fleet Composition & Corridor Passenger Demographics
-![Pair 8](visuals/pair8_fleet_and_demographics.png)
+## Visual walkthrough
 
-### 9. Fleet Investor Operating Deficit: 2x–4x Annual Services, Bank Finance & Depreciation
-![Pair 9](visuals/pair9_vehicle_owner_financial_trap.png)
+The chart pairs compare modeled problems with proposed scenarios or field observations. A chart labeled as a “solution” is an intervention scenario—not evidence that the intervention has been tested or will produce the displayed outcome in practice.
 
-### 10. Primary Field Telemetry Audit (19 Captured Dispatches: True Yield & Net Profit/Loss)
-![Pair 10](visuals/pair10_primary_field_research_validation.png)
+1. Gauteng transit-hub pickup zones and proposed geofencing — [Pair 1](visuals/pair1_taxi_ranks_and_geofencing.png)
+2. Salary-window and event-demand scenarios — [Pair 2](visuals/pair2_payday_and_stadium_spikes.png)
+3. Driver-margin comparison and lease deductions — [Pair 3](visuals/pair3_driver_exploitation_and_leases.png)
+4. Simulated panic-button and vehicle-tracking outcomes — [Pair 4](visuals/pair4_panic_buttons_and_trackers.png)
+5. Intercity and airport-trip unit-economics scenarios — [Pair 5](visuals/pair5_or_tambo_unit_economics.png)
+6. Vehicle-hygiene and trip-volume scenarios — [Pair 6](visuals/pair6_cleanliness_and_bonus_gamification.png)
+7. Simulated cancellation patterns by time and wait duration — [Pair 7](visuals/pair7_heatmap_and_wait_tolerance.png)
+8. Synthetic fleet mix and modeled passenger groups — [Pair 8](visuals/pair8_fleet_and_demographics.png)
+9. Vehicle-owner maintenance and equity scenarios — [Pair 9](visuals/pair9_vehicle_owner_financial_trap.png)
+10. Audit of captured dispatches using the project’s cost assumptions — [Pair 10](visuals/pair10_primary_field_research_validation.png)
+11. Captured offer rates and unpaid pickup distances — [Pair 11](visuals/pair11_algorithmic_decay_and_unpaid_pickup.png)
+12. Receipt, campaign, and wallet-lockout examples — [Pair 12](visuals/pair12_cash_lockout_and_campaign_traps.png)
+13. Driver-earnings scenarios under alternative pricing — [Pair 13](visuals/pair13_good_vs_excellent_pricing_5k_10k_weekly.png)
+14. Simulated outcomes for designated pickup zones — [Pair 14](visuals/pair14_smart_safety_pickup_zones_impact.png)
+15. Flat-subscription and vehicle-owner reform scenarios — [Pair 15](visuals/pair15_bro_r600_flat_subscription_and_owner_turnaround.png)
 
-### 11. Empirical Field Discovery: Algorithmic Distance Decay & "Out of Radius" Unpaid Approach Mileage
-![Pair 11](visuals/pair11_algorithmic_decay_and_unpaid_pickup.png)
+## Limitations and next validation steps
 
-### 12. Empirical Field Discovery: Verified Receipt Take-Rate (29.14%), Campaign Traps (5/6 = R0) & -R306.34 Cash Lockout
-![Pair 12](visuals/pair12_cash_lockout_and_campaign_traps.png)
+The current results are exploratory. Important limitations include:
 
-### 13. Turnaround Intervention A: Fair Tariff Reform + BRO R600/pm (R5,000 to R10,000+/Week Net Take-Home)
-![Pair 13](visuals/pair13_good_vs_excellent_pricing_5k_10k_weekly.png)
+- The 19 dispatch captures are a small convenience sample, with no sampling frame or coverage adequate for platform-wide conclusions.
+- The 2-million-trip dataset is synthetic. Its size does not make the outputs empirical; the results depend on the input assumptions and probability distributions in the code.
+- Several quantities—such as trip demand, driver demographics, platform fee behavior, cancellation rates, incident rates, tracker effectiveness, maintenance, and depreciation—are modeled or assumed. They need independently verifiable sources or appropriately collected data.
+- The historical comparison uses modeled fare and cost inputs; it is not a like-for-like analysis of archived platform tariffs and fuel prices unless those inputs are independently sourced and documented.
+- The dispatch-level profit calculation includes modeled fuel and service/wear costs, but does not represent every driver’s full cost of operation. Insurance, financing, taxes, downtime, data, cleaning, and other costs may be omitted or treated differently elsewhere in the project.
+- Observed association or a simulated scenario does not establish causation. For example, the model cannot demonstrate that a pickup-zone intervention would reduce real cancellations or safety incidents without a real-world evaluation.
+- Monetary values are nominal South African rand unless otherwise stated; inflation adjustment and uncertainty ranges should be added for historical comparisons.
 
-### 14. Turnaround Intervention B: App-Enforced 250m Smart Safety Pickup Zones
-![Pair 14](visuals/pair14_smart_safety_pickup_zones_impact.png)
+Recommended next steps are to document sources and dates for every input, distinguish observed from estimated values in the charts and exports, test sensitivity to key assumptions, reconcile calculations and labels across the notebook/script/README, and validate proposed interventions with real operational data before making causal or investment claims.
 
-### 15. Turnaround Intervention C: BRO Cabs R600/Month Flat Subscription vs. 35% Commission & Owner Profit Turnaround
-![Pair 15](visuals/pair15_bro_r600_flat_subscription_and_owner_turnaround.png)
+## Running the analysis
+
+The Python script installs DuckDB if needed, writes CSV files to `sql_exports/`, and saves chart images to `visuals/`. It also contains Google Colab-specific code for packaging and downloading outputs, so it may require adaptation to run outside Colab. The notebook is the more natural starting point for interactive exploration.
+
+Dependencies used include `pandas`, `numpy`, `matplotlib`, `seaborn`, and `duckdb`.
+
+## Author
+
+**Karabo Eugene Hlahla** · Pretoria, Gauteng, South Africa
