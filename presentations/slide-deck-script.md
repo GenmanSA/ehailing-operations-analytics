@@ -20,7 +20,7 @@ A driver-led exploratory analysis | 2018–2025 experience · 2016–2026 modele
 Pretoria, Gauteng, South Africa
 
 ### Suggested visual
-Use a clean title slide with a Gauteng map or one strong project visual. Avoid an overcrowded collage.
+![Title visual](../visuals/pair1_taxi_ranks_and_geofencing.png)
 
 ### Speaker notes
 “Hello, and thank you for taking the time to hear about this project. I worked as an Uber and Bolt partner driver from 2018 through 2025. That experience led me to examine how fares, fuel, unpaid pickup distance, vehicle costs, and pickup safety interact. This is an exploratory analysis: it combines a small set of firsthand captures with a larger synthetic simulation, and I’ll be clear about which is which.”
@@ -38,7 +38,7 @@ Use a clean title slide with a Gauteng map or one strong project visual. Avoid a
 - Which proposed changes are worth testing?
 
 ### Suggested visual
-A simple trip-economics flow: rider fare → platform deductions → driver payout → fuel, wear, lease and other costs → driver net.
+![Trip economics visual](../visuals/pair3_driver_exploitation_and_leases.png)
 
 ### Speaker notes
 “The question is not only what a trip pays. It is what remains after the costs and unpaid work required to complete it. I also look beyond the driver to vehicle-owner economics and pickup safety. The goal is to identify questions and interventions that deserve better data and real-world testing—not to claim that this exploratory model settles them.”
@@ -60,7 +60,7 @@ A simple trip-economics flow: rider fare → platform deductions → driver payo
 Partner driving on Uber and Bolt, 2018–2025
 
 ### Suggested visual
-Three clearly separated cards labeled “Driver experience,” “Field captures,” and “Synthetic simulation.”
+![Evidence structure visual](../visuals/pair8_fleet_and_demographics.png)
 
 ### Speaker notes
 “The field captures are firsthand snapshots, but they are a small convenience sample, not a representative survey. The large dataset is synthetic: its size helps explore the behavior of the programmed assumptions, but it does not make the results observed market facts. My driving experience covers 2018 through 2025; comparisons extending from 2016 to 2026 are analytical scenarios, not a claim of continuous personal records across that period.”
@@ -81,7 +81,7 @@ A more complete trip calculation considers:
 - Lease, finance, insurance, and downtime where relevant
 
 ### Suggested visual
-Use an annotated trip diagram showing pickup distance, paid trip route, and possible return/deadhead. Add a small formula: `Net operating result = payout − operating costs`.
+![Trip operating model visual](../visuals/pair11_algorithmic_decay_and_unpaid_pickup.png)
 
 ### Speaker notes
 “A fare per paid kilometre can be misleading if the driver must travel to the pickup without compensation or return from a low-demand destination. The project estimates fuel and service-and-wear costs for the captured trips, but no single calculation includes every cost a driver may face. For that reason, I describe these as modeled operating results, not a universal measure of profit.”
@@ -99,7 +99,7 @@ Use an annotated trip diagram showing pickup distance, paid trip route, and poss
 - Treat each record as an example—not a market-wide rate.
 
 ### Suggested visual
-Use `visuals/pair10_primary_field_research_validation.png` or `visuals/pair11_algorithmic_decay_and_unpaid_pickup.png`. Add a visible note: “19 captured records; convenience sample; illustrative cost assumptions.”
+![Field capture audit](../visuals/pair10_primary_field_research_validation.png)
 
 ### Speaker notes
 “These captures let us inspect individual offers more carefully. For each one, the project compares the offer with total distance that may need to be driven, then applies explicit fuel and vehicle-wear assumptions. The examples can reveal questions worth investigating, such as low effective return or long unpaid approaches. With only 19 records, however, they cannot establish how common those outcomes are across either platform.”
@@ -117,10 +117,10 @@ Use `visuals/pair10_primary_field_research_validation.png` or `visuals/pair11_al
 - Sensitivity analysis can show how conclusions change when inputs vary.
 
 ### Suggested visual
-If retaining `visuals/pair3_driver_exploitation_and_leases.png`, label every value “model input” or “scenario output” and include the source/status of each input. Otherwise, use a comparison table with columns for value, year, source, and evidence status.
+![Historical comparison](../visuals/pair3_driver_exploitation_and_leases.png)
 
 ### Speaker notes
-“The project contains a 2016-versus-2026 model, but those figures should be treated as scenario inputs unless they are backed by dated sources. The current comparison is nominal, so inflation also matters. Before making a claim about a decade-long market trend, I would validate platform tariff records, commission details, and fuel prices for each period, then compare them in both nominal and inflation-adjusted terms.”
+“The project contains a 2016-versus-2026 model, but those figures should be treated as scenario inputs unless they are backed by dated sources. The current comparison is nominal, so inflation and cost assumptions matter. Before making a claim about a decade-long market trend, I would validate platform tariff records, commission details, and fuel prices for each period, then compare them in both nominal and inflation-adjusted terms.”
 
 ---
 
@@ -134,7 +134,7 @@ If retaining `visuals/pair3_driver_exploitation_and_leases.png`, label every val
 - Real trip, online-time, and earnings records are needed to measure actual cycles.
 
 ### Suggested visual
-Use `visuals/pair2_payday_and_stadium_spikes.png` only with a prominent “synthetic scenario” label. Better: show a proposed analysis plan beside the modeled chart.
+![Demand cycle visual](../visuals/pair2_payday_and_stadium_spikes.png)
 
 ### Speaker notes
 “The simulation explores how different assumptions about payday periods, event days, and mid-month demand could affect trip patterns. It does not verify that those patterns occurred at the modeled size. To answer this properly, we would need dated trip or driver-session data across multiple months, with a clear definition of revenue, online hours, and completed trips.”
@@ -152,7 +152,7 @@ Use `visuals/pair2_payday_and_stadium_spikes.png` only with a prominent “synth
 - Measure safety, wait time, accessibility, cancellations, and trip completion.
 
 ### Suggested visual
-Use a Gauteng map or a simplified pickup-zone concept. If showing `visuals/pair14_smart_safety_pickup_zones_impact.png`, label the comparison “modeled intervention scenario,” not observed impact.
+![Safety pickup zones visual](../visuals/pair14_smart_safety_pickup_zones_impact.png)
 
 ### Speaker notes
 “The project proposes designated or safer pickup locations in areas where pickup friction may be a concern. The modeled reductions in cancellations or incidents are not measured intervention outcomes; they follow from probability settings in the code. A responsible next step would be a limited, co-designed pilot with safeguards and a comparison method, while also checking that pickup points remain accessible and do not create new risks.”
@@ -170,7 +170,7 @@ Use a Gauteng map or a simplified pickup-zone concept. If showing `visuals/pair1
 - Validate costs with invoices, finance statements, insurance quotes, and actual mileage.
 
 ### Suggested visual
-Use `visuals/pair9_vehicle_owner_financial_trap.png`, with a footnote listing which costs are assumed and which are sourced.
+![Owner economics visual](../visuals/pair9_vehicle_owner_financial_trap.png)
 
 ### Speaker notes
 “The owner model makes visible how recurring costs can change the economics of a vehicle placed into high-mileage service. But its output depends on assumptions about lease collection, service frequency, financing, insurance, and depreciation. To make this decision-useful for a fleet investor, I would replace those assumptions with real costs from a defined sample of vehicles and model low, central, and high cases.”
@@ -189,7 +189,7 @@ Use `visuals/pair9_vehicle_owner_financial_trap.png`, with a footnote listing wh
 **These are proposals, not validated business outcomes.**
 
 ### Suggested visual
-Use a three-column framework: idea → mechanism → evidence required. Avoid presenting projected weekly take-home as guaranteed.
+![Subscription intervention visual](../visuals/pair15_bro_r600_flat_subscription_and_owner_turnaround.png)
 
 ### Speaker notes
 “The project explores three intervention families: a predictable flat fee, more transparent pricing that recognizes trip costs, and safer pickup design. Each could have trade-offs for drivers, passengers, fleet owners, and a platform. The simulation helps organize hypotheses, but it cannot prove commercial viability. Each proposal needs a clear unit-economics test and operational pilot.”
@@ -209,7 +209,7 @@ Use a three-column framework: idea → mechanism → evidence required. Avoid pr
 - Test interventions with a defined comparison group and safety measures.
 
 ### Suggested visual
-A simple maturity path: “Exploratory model → Validated data → Pilot → Evaluation.”
+![Validation maturity path](../visuals/pair13_good_vs_excellent_pricing_5k_10k_weekly.png)
 
 ### Speaker notes
 “The most valuable next phase is data quality and validation. I would expand the field log, make assumptions traceable, add sensitivity analysis, and check that all record counts and chart labels agree with the source data. If an intervention is piloted, its evaluation should be designed in advance, with outcomes and safety safeguards defined before results are collected.”
@@ -226,7 +226,7 @@ Fairer economics, safer operations, and sustainable vehicles are connected quest
 **Discussion:** What data or pilot would best test these ideas?
 
 ### Suggested visual
-A restrained closing image or the project’s strongest field-data visual, with a link to the repository.
+![Closing visual](../visuals/pair1_taxi_ranks_and_geofencing.png)
 
 ### Speaker notes
 “My experience motivated this work, and the analysis has helped me organize the operational questions I want to investigate. The field captures are a starting point, and the simulations are a way to explore scenarios—not a substitute for representative data. I hope the next step is to validate the economics and test practical safety and pricing ideas with the people affected. Thank you. I welcome your questions and feedback.”
@@ -235,11 +235,14 @@ A restrained closing image or the project’s strongest field-data visual, with 
 
 ## Source visuals in the repository
 
+- `visuals/pair1_taxi_ranks_and_geofencing.png`
 - `visuals/pair2_payday_and_stadium_spikes.png`
 - `visuals/pair3_driver_exploitation_and_leases.png`
+- `visuals/pair8_fleet_and_demographics.png`
 - `visuals/pair9_vehicle_owner_financial_trap.png`
 - `visuals/pair10_primary_field_research_validation.png`
 - `visuals/pair11_algorithmic_decay_and_unpaid_pickup.png`
+- `visuals/pair13_good_vs_excellent_pricing_5k_10k_weekly.png`
 - `visuals/pair14_smart_safety_pickup_zones_impact.png`
 - `visuals/pair15_bro_r600_flat_subscription_and_owner_turnaround.png`
 
